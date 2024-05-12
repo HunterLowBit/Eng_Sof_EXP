@@ -9,9 +9,9 @@ data = np.array([[156, 124, 77, 82, 53, 32, 33, 12, 10, 13, 8, 0, 0],
 chi2, p, dof, expected = chi2_contingency(data)
 
 with open("Resposta.txt", "w") as f:
-    f.write(f"Chi-squared statistic: {chi2:.6f}\n")
-    f.write(f"P-value: {p:.6f}\n")
-    f.write(f"Degrees of freedom: {dof:.6f}\n")
+    f.write(f"Chi-squared statistic: {chi2:.8f}\n")
+    f.write(f"P-value: {p:.8f}\n")
+    f.write(f"Degrees of freedom: {dof:.8f}\n")
     f.write(f"Expected frequencies: \n")
     np.savetxt(f, expected, fmt='%1.8f')
 
